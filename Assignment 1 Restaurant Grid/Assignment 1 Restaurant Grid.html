@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center; /* Center the grid */
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1200px; /* Limit the width of the grid */
+            width: 100%; /* Full width up to max-width */
+        }
+        .restaurant-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            max-width: 320px; /* Increased the width of each card */
+            margin: auto; /* Center the cards */
+        }
+        .restaurant-image {
+            width: 310px;
+            height: 350px;
+            object-fit: cover;
+        }
+        .restaurant-name {
+            padding: 10px 0;
+            font-size: 1.6em; /* Increased size */
+            font-weight: bold; /* Bold text */
+            color: #333;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .info-field {
+            flex: 1;
+            padding: 0 10px;
+            color: #555;
+        }
+        .info-left {
+            text-align: left; /* Align left */
+        }
+        .info-right {
+            text-align: right; 
+        }
+        /* Tried using ★ and ☆ to represent the ratings in the html part
+        but my laptop doesn't seem to have the unicode needed to render half stars*/
+    </style> 
+    
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="restaurant-card">
+            <img src="1.jpg" alt="Restaurant 1" class="restaurant-image">
+            <div class="restaurant-name">The River Merchant</div>
+            <div class="info-row">
+                <div class="info-field info-left">911 N Mantua St</div>
+                <div class="info-field info-right">New American</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.4 stars</div> 
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">167 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="2.jpg" alt="Restaurant 2" class="restaurant-image">
+            <div class="restaurant-name">The Paradise</div>
+            <div class="info-row">
+                <div class="info-field info-left">425 Cherry St</div>
+                <div class="info-field info-right">Mexican</div>
+            </div>
+            <div class="info-row">
+              <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.4 stars</div>
+            </div>
+            <div class="info-row">
+              <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">170 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="3.jpg" alt="Restaurant 3" class="restaurant-image">
+            <div class="restaurant-name">The Lake House Kitchen</div>
+            <div class="info-row">
+                <div class="info-field info-left">7508 St Rt 43</div>
+                <div class="info-field info-right">Seafood</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">3.9 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">111 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="4.jpg" alt="Restaurant 4" class="restaurant-image">
+            <div class="restaurant-name">Erie Street Kitchen</div>
+            <div class="info-row">
+                <div class="info-field info-left">163 W Erie St Venice Cafe</div>
+                <div class="info-field info-right">Seafood</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.4 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">133 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="5.jpg" alt="Restaurant 5" class="restaurant-image">
+            <div class="restaurant-name">Ray's Place</div>
+            <div class="info-row">
+                <div class="info-field info-left">135 Franklin Ave</div>
+                <div class="info-field info-right">American</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.0 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">337 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="6.jpg" alt="Restaurant 6" class="restaurant-image">
+            <div class="restaurant-name">Over Easy At The Depot</div>
+            <div class="info-row">
+                <div class="info-field info-left">152 Franklin Ave</div>
+                <div class="info-field info-right">Breakfast & Brunch</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.4 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">238 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="7.jpg" alt="Restaurant 7" class="restaurant-image">
+            <div class="restaurant-name">Laziza</div>
+            <div class="info-row">
+                <div class="info-field info-left">195 E Erie St</div>
+                <div class="info-field info-right">Mediterranean</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">3.9 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">151 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="8.jpg" alt="Restaurant 8" class="restaurant-image">
+            <div class="restaurant-name">Bistro on Main</div>
+            <div class="info-row">
+                <div class="info-field info-left">1313 W Main St</div>
+                <div class="info-field info-right">New American</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">3.7 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">165 reviews</div>
+            </div>
+        </div>
+        <div class="restaurant-card">
+            <img src="9.jpg" alt="Restaurant 9" class="restaurant-image">
+            <div class="restaurant-name">Grazers</div>
+            <div class="info-row">
+                <div class="info-field info-left">123 N Water St</div>
+                <div class="info-field info-right">Vegan</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">Kent</div>
+                <div class="info-field info-right">4.4 stars</div>
+            </div>
+            <div class="info-row">
+                <div class="info-field info-left">OH 44240</div>
+                <div class="info-field info-right">75 reviews</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
